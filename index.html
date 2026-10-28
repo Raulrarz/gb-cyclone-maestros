@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&amp;B Cyclone Maestros - Instalación de Malla Ciclónica y Cercos Perimetrales</title>
+    
+    <!-- SEO Local y Meta Descripción -->
+    <meta name="description" content="Especialistas en instalación de malla ciclónica, cercos perimetrales, cinta de privacidad y concertina para casas, terrenos y bodegas. ¡Cotiza al instante por WhatsApp!">
+    <meta name="keywords" content="malla ciclonica, cercos perimetrales, concertina, cinta de privacidad, delimitacion de terrenos, malla galvanizada">
+
+    <!-- Open Graph para Redes Sociales -->
+    <meta property="og:title" content="G&amp;B Cyclone Maestros - Seguridad Perimetral">
+    <meta property="og:description" content="Instalación profesional de malla ciclónica con materiales galvanizados de alta calidad. Cotización rápida sin compromiso.">
+    <meta property="og:image" content="img/portada.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <!-- Font Awesome (Iconos Oficiales) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Librería Three.js para Animación 3D -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+
+    <!-- Archivo CSS Principal -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Datos Estructurados LocalBusiness para SEO Local y GEO (Indexación IA) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "G&B Cyclone Maestros",
+      "image": "img/portada.jpg",
+      "description": "Instalación profesional de malla ciclónica, puertas, concertina y cercos perimetrales para casas, terrenos y bodegas.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Zona Metropolitana y Alrededores",
+        "addressCountry": "MX"
+      },
+      "telephone": "+523312883070",
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61593134263485"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Header & Navegación Principal -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="G&B Cyclone Maestros Logo" style="height: 40px; width: auto;">
+                <span>G&amp;B Cyclone Maestros</span>
+            </a>
+
+            <button class="mobile-nav-toggle" id="navToggle" aria-label="Abrir menú de navegación">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav id="primaryNav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#galeria">Proyectos</a></li>
+                    <li><a href="#nosotros">Por qué elegirnos</a></li>
+                    <li><a href="#faq">Preguntas Frecuentes</a></li>
+                    <!-- Enlace directo a Facebook -->
+                    <li><a href="https://www.facebook.com/profile.php?id=61593134263485" target="_blank" rel="noopener" title="Síguenos en Facebook" style="font-size: 1.2rem; color: #60a5fa;"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#contacto" class="btn-cotizar-nav">Cotizar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section con Fondo 3D Interactivo y Portada -->
+        <section id="inicio" class="hero">
+            <canvas id="hero-3d-canvas"></canvas>
+
+            <div class="hero-content">
+                <span class="badge"><i class="fa-solid fa-check-circle"></i> Especialistas en Seguridad Perimetral</span>
+                <h1>Instalación de Malla Ciclónica para Tu Casa, Negocio o Terreno</h1>
+                <p>Protegemos tu patrimonio con materiales galvanizados de alta calidad y la mejor mano de obra. ¡Cotiza al instante sin compromiso!</p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn btn-primary"><i class="fa-solid fa-calculator"></i> Cotizar Ahora</a>
+                    <a href="https://wa.me/523312883070?text=Hola,%20busco%20información%20sobre%20malla%20ciclónica" target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Directo</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios con Efecto 3D Tilt Interactivo -->
+        <section id="servicios" class="container">
+            <div class="section-header">
+                <h2>Nuestros Servicios</h2>
+                <p>Soluciones perimetrales diseñadas con máxima durabilidad.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="card" onclick="selectService('Malla para Casas y Terrenos')">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-house-lock"></i>
+                    </div>
+                    <h3>Casas y Terrenos</h3>
+                    <p>Delimitación segura con malla ciclónica ideal para predios privados, fraccionamientos y jardines.</p>
+                    <a href="#contacto" class="card-link">Seleccionar para cotizar <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="card" onclick="selectService('Cercos para Negocios y Bodegas')">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-warehouse"></i>    
+                    </div>
+                    <h3>Negocios y Bodegas</h3>
+                    <p>Protección perimetral reforzada para complejos industriales, bodegas, locales e infraestructuras.</p>
+                    <a href="#contacto" class="card-link">Seleccionar para cotizar <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="card" onclick="selectService('Cercos para Áreas Deportivas')">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-futbol"></i>
+                    </div>
+                    <h3>Áreas Deportivas</h3>
+                    <p>Cercados de altura especial y alta resistencia para canchas de fútbol, básquetbol y parques.</p>
+                    <a href="#contacto" class="card-link">Seleccionar para cotizar <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="card" onclick="selectService('Puertas y Accesorios')">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-door-open"></i>
+                    </div>
+                    <h3>Puertas y Accesorios</h3>
+                    <p>Soluciones de puertas y accesorios para garantizar la seguridad, accesibilidad y privacidad de tus espacios.</p>
+                    <a href="#contacto" class="card-link">Seleccionar para cotizar <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería de Proyectos con Lightbox Multi-Imagen -->
+        <section id="galeria" class="container">
+            <div class="section-header">
+                <h2>Proyectos e Instalaciones Realizadas</h2>
+                <p>Haz clic en cualquier proyecto para ver las fotografías en tamaño completo.</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card" onclick="openGallery(['img/proyecto1.jpg', 'img/proyecto1_2.jpg'], 'Delimitación Perimetral de Terreno')">
+                    <div class="project-img-wrapper">
+                        <img src="img/proyecto1.jpg" alt="Instalación de Malla Ciclónica en Terreno Privado" loading="lazy">
+                        <span class="project-badge">Terrenos y Casas</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Delimitación Perimetral de Terreno</h3>
+                        <p>Malla ciclónica de 2.00m de altura con alambre de púa en la parte superior para máxima seguridad.</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card" onclick="openGallery(['img/proyecto2.jpg', 'img/proyecto2_2.jpg'], 'Cercado de Bodega Comercial')">
+                    <div class="project-img-wrapper">
+                        <img src="img/proyecto2.jpg" alt="Cercado industrial para bodega" loading="lazy">
+                        <span class="project-badge">Industrial</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Cercado de Bodega Comercial</h3>
+                        <p>Instalación reforzada sobre poste tubular galvanizado con cimentación profunda.</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="project-card" onclick="openGallery(['img/proyecto3.jpg', 'img/proyecto3_2.jpg'], 'Puerta Vehicular y Peatonal')">
+                    <div class="project-img-wrapper">
+                        <img src="img/proyecto3.jpg" alt="Instalación de Puerta Ciclónica" loading="lazy">
+                        <span class="project-badge">Puertas y Accesos</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Puerta Vehicular y Peatonal</h3>
+                        <p>Fabricación a medida con marco de tubo galvanizado y pasadores de alta resistencia.</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4: Múltiples Fotos (Privacidad y Concertina) -->
+                <div class="project-card" onclick="openGallery(['img/proyecto4.jpg', 'img/proyecto4_2.jpg'], 'Malla Ciclónica con Cinta de Privacidad y Concertina')">
+                    <div class="project-img-wrapper">
+                        <img src="img/proyecto4.jpg" alt="Instalación de Malla Ciclónica con Cinta de Privacidad y Concertina" loading="lazy">
+                        <span class="project-badge">Privacidad y Seguridad</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Malla Ciclónica con Cinta de Privacidad y Concertina</h3>
+                        <p>Protección perimetral integral sobre barda que combina ocultamiento visual con cinta plástica de alta densidad y barrera superior de seguridad con concertina de acero.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Por Qué Elegirnos -->
+        <section id="nosotros" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>¿Por qué Elegir G&amp;B Cyclone Maestros?</h2>
+                    <p>Garantizamos durabilidad, velocidad y transparencia en cada proyecto.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-shield-cat"></i>
+                        <h3>Calidad Galvanizada</h3>
+                        <p>Materiales con recubrimiento de alta duración resistente a la intemperie y a la corrosión.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <h3>Instalación Profesional</h3>
+                        <p>Equipo técnico con experiencia para una colocación firme, alineada y duradera.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-bolt"></i>
+                        <h3>Cotización Rápida</h3>
+                        <p>Calculamos tu requerimiento rápidamente y sin compromiso ni costos ocultos.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <h3>Garantía de Trabajo</h3>
+                        <p>Respaldamos la mano de obra y fijación para la máxima tranquilidad de tu inversión.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Preguntas Frecuentes (SEO & GEO Optimizer) -->
+        <section id="faq" class="container">
+            <div class="section-header">
+                <h2>Preguntas Frecuentes</h2>
+                <p>Resolvemos tus dudas principales para que cotices con total tranquilidad.</p>
+            </div>
+
+            <div class="faq-grid" style="display: grid; gap: 20px; max-width: 850px; margin: 0 auto;">
+                <div class="faq-card" style="background: #ffffff; padding: 25px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <h3 style="font-size: 1.1rem; color: #0f172a; margin-bottom: 8px;"><i class="fa-solid fa-circle-question" style="color: var(--primary);"></i> ¿Qué incluye el servicio de instalación de malla ciclónica?</h3>
+                    <p style="color: #64748b; font-size: 0.95rem; margin: 0;">Incluye la asesoría inicial, materiales galvanizados de primera calidad (postes, tubería, malla, alambre de púas o concertina) y la mano de obra profesional para una fijación firme y garantizada.</p>
+                </div>
+
+                <div class="faq-card" style="background: #ffffff; padding: 25px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <h3 style="font-size: 1.1rem; color: #0f172a; margin-bottom: 8px;"><i class="fa-solid fa-circle-question" style="color: var(--primary);"></i> ¿Cómo solicitó una cotización rápida?</h3>
+                    <p style="color: #64748b; font-size: 0.95rem; margin: 0;">Simplemente selecciona el servicio en nuestro formulario interactivo, indica los metros lineales aproximados y haz clic en el botón para enviar tu mensaje directo por WhatsApp.</p>
+                </div>
+
+                <div class="faq-card" style="background: #ffffff; padding: 25px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <h3 style="font-size: 1.1rem; color: #0f172a; margin-bottom: 8px;"><i class="fa-solid fa-circle-question" style="color: var(--primary);"></i> ¿Instalan en terrenos particulares, casas y bodegas?</h3>
+                    <p style="color: #64748b; font-size: 0.95rem; margin: 0;">¡Sí! Atendemos predios residenciales, fraccionamientos, jardines particulares, canchas deportivas y cercados de alta seguridad para bodegas comerciales e industriales.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto / Cotizador -->
+        <section id="contacto" class="container">
+            <div class="contact-card">
+                <div class="contact-info">
+                    <h2>¡Solicita tu Cotización al Instante!</h2>
+                    <p>Llena los datos básicos y nuestro sistema generará la consulta lista para enviarse por WhatsApp.</p>
+
+                    <ul class="contact-details">
+                        <li><i class="fa-solid fa-phone"></i> Directo / WhatsApp disponible</li>
+                        <li><i class="fa-brands fa-facebook"></i> <a href="https://facebook.com/TU_PAGINA" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Visítanos en Facebook</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i> Atención en Zona Metropolitana y alrededores</li>
+                        <li><i class="fa-solid fa-clock"></i> Horario de atención: Lunes a Sábado 9:00 am - 6:00 pm</li>
+                    </ul>
+                </div>
+
+                <div class="quote-form-wrapper">
+                    <form id="quoteForm" onsubmit="event.preventDefault(); enviarWhatsApp();">
+                        <div class="form-group">
+                            <label for="servicioSelect">Tipo de Servicio</label>
+                            <select id="servicioSelect" required>
+                                <option value="">Selecciona un servicio</option>
+                                <option value="Malla para Casas y Terrenos">Malla para Casas y Terrenos</option>
+                                <option value="Cercos para Negocios y Bodegas">Cercos para Negocios y Bodegas</option>
+                                <option value="Cercos para Áreas Deportivas">Cercos para Áreas Deportivas</option>
+                                <option value="Puertas y Accesorios">Puertas y Accesorios</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="metros">Metros Lineales Aprox. (Opcional)</label>
+                            <input type="number" id="metros" placeholder="Ej. 25" min="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comentarios">Detalles o Ubicación Aproximada del Trabajo</label>
+                            <textarea id="comentarios" rows="3" placeholder="Ej. Requiero altura de 2 metros con alambre de púas..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fa-brands fa-whatsapp"></i> Solicitar Cotización por WhatsApp
+                        </button>
+                    </form>
+                </div> 
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+            <div>
+                <h3>G&amp;B Cyclone Maestros</h3>
+                <p>Expertos en delimitación perimetral y cercas de alta calidad</p>
+            </div>
+            <!-- Redes sociales en el footer -->
+            <div class="footer-social" style="display: flex; gap: 20px; font-size: 1.5rem;">
+                <a href="https://www.facebook.com/profile.php?id=61593134263485" target="_blank" rel="noopener" style="color: #ffffff; transition: color 0.2s;" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://wa.me/523312883070" target="_blank" rel="noopener" style="color: #25d366; transition: color 0.2s;" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2026 G&amp;B Cyclone Maestros. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/523312883070?text=Hola,%20me%20gustaría%20cotizar%20una%20malla%20ciclónica" target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Banner de Aviso de Cookies -->
+    <div id="cookieBanner" class="cookie-banner" style="display: none;">
+        <p>Utilizamos cookies propias y de terceros para mejorar nuestros servicios y analizar el tráfico web. <a href="#" style="color: #60a5fa; text-decoration: underline;">Más información</a>.</p>
+        <button onclick="aceptarCookies()" class="btn-cookie">Aceptar</button>
+    </div>
+
+    <!-- Ventana Modal / Lightbox para ampliado de imágenes -->
+    <div id="imageModal" class="modal-gallery" style="display: none;">
+        <span class="modal-close" onclick="closeGallery()">&times;</span>
+        <button class="modal-prev" id="prevBtn" onclick="changeImage(-1)" aria-label="Imagen anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="modal-content-wrapper">
+            <img id="modalImg" src="" alt="Vista ampliada del proyecto">
+            <div id="modalCaption" class="modal-caption"></div>
+        </div>
+        <button class="modal-next" id="nextBtn" onclick="changeImage(1)" aria-label="Siguiente imagen"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Archivo JS Principal -->
+    <script src="script.js"></script>
+</body>
+</html>
