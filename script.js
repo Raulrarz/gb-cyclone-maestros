@@ -39,17 +39,37 @@ function selectService(serviceName) {
     }
 }
 
-// --- 3. CONTROL DEL AVISO DE COOKIES ---
+// --- 3. CONTROL DEL AVISO DE COOKIES Y MENÚ HAMBURGUESA MÓVIL ---
 document.addEventListener("DOMContentLoaded", () => {
+    // Aviso de cookies
     const cookiesAceptadas = localStorage.getItem("gb_cookies_aceptadas");
     if (!cookiesAceptadas) {
-        document.getElementById("cookieBanner").style.display = "flex";
+        const cookieBanner = document.getElementById("cookieBanner");
+        if (cookieBanner) cookieBanner.style.display = "flex";
+    }
+
+    // Menú hamburguesa responsive
+    const navToggle = document.getElementById("navToggle");
+    const primaryNav = document.querySelector("nav ul");
+
+    if (navToggle && primaryNav) {
+        navToggle.addEventListener("click", () => {
+            primaryNav.classList.toggle("active");
+        });
+
+        // Ocultar menú al hacer clic en cualquier enlace
+        primaryNav.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                primaryNav.classList.remove("active");
+            });
+        });
     }
 });
 
 function aceptarCookies() {
     localStorage.setItem("gb_cookies_aceptadas", "true");
-    document.getElementById("cookieBanner").style.display = "none";
+    const cookieBanner = document.getElementById("cookieBanner");
+    if (cookieBanner) cookieBanner.style.display = "none";
 }
 
 // --- 4. LÓGICA DE GALERÍA AMPLIADA Y MULTI-IMAGEN (LIGHTBOX) ---
