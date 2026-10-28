@@ -669,7 +669,55 @@ footer h3 {
 .modal-prev { left: 30px; }
 .modal-next { right: 30px; }
 
+/* --- RESPONSIVIDAD MÓVIL (CORRECCIÓN DE DISEÑO) --- */
 @media (max-width: 768px) {
+    /* Ocultar menú de escritorio y mostrar botón hamburguesa */
+    .mobile-nav-toggle {
+        display: block !important;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(15px);
+        padding: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 20px 30px rgba(0,0,0,0.5);
+    }
+
+    /* Clase activa para desplegar menú con JavaScript si se requiere */
+    nav ul.active {
+        display: flex;
+    }
+
+    /* Ajuste del título principal en pantallas pequeñas */
+    .hero h1 {
+        font-size: 2.1rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero {
+        padding: 90px 15px 100px 15px;
+    }
+
+    /* Ajuste de tarjetas y contenedores de contacto */
+    .contact-card {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info, .quote-form-wrapper {
+        padding: 30px 20px;
+    }
+
     .modal-prev { left: 10px; }
     .modal-next { right: 10px; }
 }
